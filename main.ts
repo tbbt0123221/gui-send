@@ -43,7 +43,7 @@ input.onButtonPressed(Button.AB, function () {
         led.setBrightness(255)
     } else {
         radio.sendValue("spead", 0)
-        led.setBrightness(100)
+        led.setBrightness(50)
     }
     if (0 <= 送信) {
         i = 0
