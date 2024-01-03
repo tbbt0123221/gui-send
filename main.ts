@@ -36,8 +36,15 @@ input.onButtonPressed(Button.A, function () {
     basic.pause(100)
 })
 input.onButtonPressed(Button.AB, function () {
-    radio.sendNumber(送信)
     basic.clearScreen()
+    radio.sendNumber(送信)
+    if (input.isGesture(Gesture.LogoUp)) {
+        radio.sendValue("spead", 25)
+        led.setBrightness(255)
+    } else {
+        radio.sendValue("spead", 0)
+        led.setBrightness(100)
+    }
     if (0 <= 送信) {
         i = 0
         for (let index = 0; index < Math.trunc(送信 / 5); index++) {
